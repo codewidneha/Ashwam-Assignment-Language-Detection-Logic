@@ -59,6 +59,8 @@ python3 lang_detect.py --in texts.jsonl --out results.jsonl --stats
 ```json
 {"id": "1", "text": "aaj mausam accha hai"}
 ```
+<img width="680" height="250" alt="Screenshot 2025-12-24 at 2 30 33 AM" src="https://github.com/user-attachments/assets/5be00296-32a9-4979-86cb-4e411e962276" />
+
 
 **Output Format**:
 ```json
@@ -74,6 +76,8 @@ python3 lang_detect.py --in texts.jsonl --out results.jsonl --stats
   }
 }
 ```
+<img width="1042" height="236" alt="Screenshot 2025-12-24 at 2 34 29 AM" src="https://github.com/user-attachments/assets/59d9e288-41ed-4487-ab17-b2f189132fbe" />
+
 
 ### Running Tests
 We have a comprehensive test suite covering edge cases, regression, and logic verification.
