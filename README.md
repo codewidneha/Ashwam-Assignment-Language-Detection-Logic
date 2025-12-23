@@ -82,19 +82,3 @@ We have a comprehensive test suite covering edge cases, regression, and logic ve
 # Run all tests
 python3 test_detector.py
 ```
-
-## Limitations & Known Failure Cases
-
-1.  **Short Ambiguous Text**: Inputs like "hi" or "to" exist in both languages. We default to English or Unknown with very low confidence.
-2.  **Lexicon Dependency**: If a Hinglish sentence uses valid Hindi words *not* in our small lexicon (e.g., obscure nouns), it may be misclassified as English or Unknown.
-3.  **Spelling Variations**: "kya" vs "kyaaa" - strict matching might miss informal spelling variations (though we cover common ones).
-4.  **Code-Switching Complexity**: Sentences that switch languages mid-phrase are hard to boundary-check without a sequence model.
-
-## Future Improvements
-
-If we had more time or tools, we would:
-
-1.  **Phonetic Matching**: Use a Soundex-like algorithm for Indian languages to handle spelling variations (e.g., *kaise* vs *kese*).
-2.  **N-gram Analysis**: Look at character tri-grams to detect language "texture" beyond word lookups.
-3.  **Contextual ML**: Train a small FastText or Naive Bayes model on a larger corpus to handle vocabulary we missed.
-4.  **Browser/Edge Support**: Port this logic to TypeScript/WASM for client-side detection to save server costs.
